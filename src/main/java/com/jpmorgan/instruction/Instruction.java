@@ -40,8 +40,8 @@ public class Instruction {
     
     @Override
     public String toString() {
-        return flagBuySell + " " + settlementDate + " " + entity + " " + 
-    + (agreedFx*units*pricePerUnit) + " USD from currency " + currency;
+        return flagBuySell + " " + settlementDate + " (" + entity + ") <" + 
+    + (agreedFx*units*pricePerUnit) + "> USD from currency " + currency;
     }
 
 	public String getEntity() {
