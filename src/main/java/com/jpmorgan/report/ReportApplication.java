@@ -20,10 +20,8 @@ import com.jpmorgan.instruction.Instruction;
 import com.jpmorgan.test.instructions.dates.TestInstructionsDates;
 import com.jpmorgan.workweek.WorkWeek;
 
-//@SpringBootApplication
 public class ReportApplication {
 
-	//public static Set<Instruction> setInstructions;
 	public static boolean DESC = false;
 	
 	public static void main(String[] args) {
@@ -31,8 +29,7 @@ public class ReportApplication {
 		WorkWeek ww = new WorkWeek();	
 		
 		final Set<Instruction> setInstructions = TestInstructionsDates.getDatesForInstruction();
-		//setInstructions = TestInstructionsDates.getDatesForInstruction();
-		
+				
 		int datasCount;
 		
 		DayOfWeek dof;
@@ -123,8 +120,10 @@ public class ReportApplication {
 	}
 	
 	public static <K, V> void printMap(Map<K, V> map) {
+		int k=1;
 		for (Map.Entry<K, V> entry : map.entrySet()) {
-			System.out.println(entry.getKey() + " " + entry.getValue());
+			System.out.println(k + " " + entry.getKey() + " " + entry.getValue());
+			k++;
 		}
 	}
 	
